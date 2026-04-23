@@ -8,6 +8,9 @@
   --gray-border: #cccccc;
   --table-emphasis-background: #e9e8e8;
   --table-background: #f4f4f4;
+  --form-white: #fefefe;
+  --midnight-blue: #161678;
+  --midnight-blue-dark: #0b0b4f;
 }
 
 body {
@@ -16,6 +19,12 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 /* Navigation styles */
@@ -125,4 +134,77 @@ body {
 .table-footer td {
   font-weight: bold;
   background-color: var(--table-emphasis-background);
+}
+
+/* Form IRA Roth Calculator  */
+.form-container {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--form-white);
+}
+
+.color-bg-blue {
+  background-color: var(--midnight-blue-dark);
+}
+
+.main-heading-form {
+  text-align: center;
+  color: var(--midnight-blue);
+}
+
+.form-element {
+  margin-bottom: 0.5rem;
+}
+
+.form-label {
+  display: inline-block;
+  width: 48%;
+}
+
+.form-input {
+  display: inline-block;
+  width: 44%;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.form-radios {
+  margin-left: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.form-element:last-of-type {
+  margin: 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  width: 49%;
+  border: 0;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  background-color: var(--midnight-blue);
+  color: var(--form-white);
+}
+
+.btn-submit:hover {
+  background-color: var(--midnight-blue-dark);
+}
+
+.btn-reset:hover {
+  background-color: var(--gray-border);
+}
+
+.form-note {
+  font-size: 0.8rem;
+}
+
+.form-note a {
+  color: var(--midnight-blue);
 }
