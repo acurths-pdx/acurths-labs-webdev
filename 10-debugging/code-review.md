@@ -144,7 +144,7 @@ Updated html:
 
 (this would need to be repeated for username, email, and phone number as well)
 
-### Issue #5: Form Issue 2/2 - \<p> Used as a Wrapper for Form Input
+### Issue 5: Form Issue 2/2 - \<p> Used as a Wrapper for Form Input
 
 The form input section is wrapped in \<p> elements, but a \<p> element semantically means a paragraph of text content. Using it as a layout container for a form label and an input field is semantically wrong. A \<div> is more appropriate wrapper/container to use in this circumstance.
 
@@ -232,7 +232,7 @@ Updated html:
 </fieldset>
 ```
 
-### Issue #8: Redundant/Overwritten Background-color in .close-popup-button
+### Issue 8: Redundant/Overwritten Background-color in .close-popup-button
 
 In styles.css, background-color is set twice on .close-popup-button. The first declaration (var(--white)) is overridden by the second one (transparent), which means the first one has no effect. The first declaration can be removed.
 
@@ -269,7 +269,7 @@ Updated css:
 }
 ```
 
-### Issue 10: Broken Cat Fact Reload / Loading Container Error
+### Issue 9: Broken Cat Fact Reload / Loading Container Error
 
 In the finally block of fetchCatFacts, loading.setAttribute('class', 'display-none') replaces the element's entire class attribute and removes the class in the process. After an initial run, any reload attempt with querySelector('.loading-container') fails to find the element. On a reload, it returns null, which causes a type error. The old facts are cleared from the page, but new ones are not loaded, leaving this section blank. To fix this, the class would need to be preserved using loading.setAttribute('class', 'loading-container display-none'). Alternatively, an even cleaner fix is to use loading.replaceChildren(), which will clear the spinner image without even touching the class attribute, so querySelector('.loading-container') will be able to find the element and won't throw an error, allowing the cat facts to properly reload.
 
